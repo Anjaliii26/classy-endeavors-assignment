@@ -26,7 +26,8 @@ const TestimonialSection = () => {
 
   return (
     <div className="relative max-w-[1230px] w-full mx-auto mt-6 px-4">
-      <h2 className=" font-[700] font-poppins text-3xl  leading-[45px] text-[#262626] text-center">
+      <h2 className=" 
+      z font-poppins text-3xl  leading-[45px] text-[#262626] text-center">
         What our users say
       </h2>
 

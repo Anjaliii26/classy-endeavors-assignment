@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FreePlan from "./Freeplan";
+import FreePlan from "./FreePlan";
 import TeamPlan from "./TeamPlan";
 import PremiumPlan from "./PremiumPlan";
 
