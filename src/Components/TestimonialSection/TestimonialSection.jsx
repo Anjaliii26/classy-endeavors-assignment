@@ -26,24 +26,23 @@ const TestimonialSection = () => {
 
   return (
     <div className="relative max-w-[1230px] w-full mx-auto mt-6 px-4">
-      <h2 className=" 
-      z font-poppins text-3xl  leading-[45px] text-[#262626] text-center">
+      <h2 className="font-poppins text-3xl leading-[45px] text-[#262626] text-center">
         What our users say
       </h2>
 
-      <div className="relative flex items-center justify-center mt-8 gap-6">
+      <div className="relative flex items-center justify-center mt-8 gap-6 flex-wrap md:flex-nowrap">
         {Array.from({ length: visibleCount }).map((_, i) => {
           const index = (currentIndex + i) % total;
           return (
             <div
               key={index}
-              className="relative w-[349px] h-[239px] bg-white border border-white shadow-md p-6 text-center flex flex-col justify-between rounded-[10px]"
+              className="relative w-full sm:w-[349px] h-auto bg-white border border-white shadow-md p-6 text-center flex flex-col justify-between rounded-[10px]"
               style={{ boxShadow: "0px 7px 8px rgba(0, 0, 0, 0.25)" }}
             >
               {i === 0 && (
                 <button
                   onClick={prevSlide}
-                  className="absolute left-[-25px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] rounded-full bg-[#254A76] shadow-md flex items-center justify-center z-10"
+                  className="absolute left-[-10px] sm:left-[-25px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] rounded-full bg-[#254A76] shadow-md flex items-center justify-center z-10"
                 >
                   <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 18L8 11.5L14 5" stroke="white" strokeWidth="2" />
@@ -55,12 +54,14 @@ const TestimonialSection = () => {
               <p className="font-poppins text-base leading-6 text-[#262626] mt-12 min-h-[72px]">
                 {testimonials[index]}
               </p>
-              <img src={Star} alt="Stars" className="block mx-auto mt-6 mb-5" />
+              <div className="flex justify-center mt-6 mb-5">
+                <img src={Star} alt="Stars" className="w-auto h-auto" />
+              </div>
 
               {i === 2 && (
                 <button
                   onClick={nextSlide}
-                  className="absolute right-[-25px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] rounded-full bg-[#254A76] shadow-md flex items-center justify-center z-10"
+                  className="absolute right-[-10px] sm:right-[-25px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] rounded-full bg-[#254A76] shadow-md flex items-center justify-center z-10"
                 >
                   <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 5L14 11.5L8 18" stroke="white" strokeWidth="2" />
